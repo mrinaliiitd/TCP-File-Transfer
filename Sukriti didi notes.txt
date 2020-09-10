@@ -1,0 +1,77 @@
+clustered dataset, feeling bias in it
+clustered into 4539 families
+analysis done on these families
+
+
+Conserved domain Pfam - did not found many 
+
+eg. ribosomal proteins have a specific domain
+
+
+no good homologous templace
+=> FOld recognition or abinitio
+
+Why structure analysis for function?
+eg. beta barrel -> transport (but should also be in membrane na)
+
+
+Housekeeping proteins (conserved throughout)
+protein to be secreted for
+1. Cell cell communication
+2. antimicrobial peptide
+also divideed in
+Horizontal gene transfer 
+
+Heatshock proteins(Check if divided in this)
+
+Checked if secreted or transmembrane
+
+run it through metagenomes of just gut
+in mouth, vagina -> 
+
+would be localised in cytoplasm, no DNA in bacteria
+DNA Binding domain?
+Localised in cytoplasm
+
+
+eg. transportable proteins -> 6-10 helices
+
+4 locations taken:
+mouth, gut(6.7-8.5pH), skin, vagina(3.8-4.5pH)
+
+DNA sequences also given
+first dna sequences -> Open Reading frames -> CHecked which will be transcribed/transcripted
+RNACode
+Transcription factors, cytoplasm localised
+
+RiboSeq - translated/transcribed
+
+Bacterial and eukaryotic genomes
+intronix sequences in eukaryotic
+
+genes working similar functions are clubbed together in bacterial 
+bacterial operon
+defined bacteriophages, crispr genes for them which lie together
+virulent proteins
+
+eg. lactose operon
+
+One way:
+	Start with Grouping localisation
+	then eg. channel proteins
+
+Second way: 
+	Placed where extracted from (Gut, mouth, vagina, skin)
+
+SIR NOTES:
+PCA Clustering
+STRING database
+
+Read paper
+
+Make cluster in short and long proteins on the basis of localisation or something, then multiple sequence align long and short proteins of one cluster to check for similar function
+If long ke domains me align to we can say similar, or better, specific function of the short protein  
+micro modulator
+
+
+check what is antimicrobial peptide
