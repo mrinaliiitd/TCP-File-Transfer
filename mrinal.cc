@@ -160,8 +160,11 @@ int main (int argc, char **argv)
    NodeContainer n15 (ro5, i);
    NodeContainer n16 (ro6, j);
    NodeContainer n17 (ro6, k);
-   NodeContainer routers (ro1,ro2,ro3,ro4,ro5,ro6);
-   NodeContainer nodes (a,b,c,d,e,f,g,h,i,j);
+   NodeContainer temprouters (ro1,ro2,ro3,ro4,ro5);
+   NodeContainer routers (temprouters,ro6);
+   NodeContainer nodes1 (a,b,c,d,e);
+   NodeContainer nodes2 (f,g,h,i,j);
+   NodeContainer nodes (nodes1,nodes2);
  
 
   NS_LOG_INFO ("Create channels.");
@@ -250,25 +253,25 @@ int main (int argc, char **argv)
   ipv4.SetBase (Ipv4Address ("10.0.6.0"), Ipv4Mask ("255.255.255.0"));
   Ipv4InterfaceContainer iic7 = ipv4.Assign (ndc7);
 ipv4.SetBase (Ipv4Address ("10.0.7.0"), Ipv4Mask ("255.255.255.0"));
-  Ipv4InterfaceContainer iic7 = ipv4.Assign (ndc8);
+  Ipv4InterfaceContainer iic8 = ipv4.Assign (ndc8);
 ipv4.SetBase (Ipv4Address ("10.0.8.0"), Ipv4Mask ("255.255.255.0"));
-  Ipv4InterfaceContainer iic7 = ipv4.Assign (ndc9);
+  Ipv4InterfaceContainer iic9 = ipv4.Assign (ndc9);
 ipv4.SetBase (Ipv4Address ("10.0.10.0"), Ipv4Mask ("255.255.255.0"));
-  Ipv4InterfaceContainer iic7 = ipv4.Assign (ndc11);
+  Ipv4InterfaceContainer iic10 = ipv4.Assign (ndc11);
 ipv4.SetBase (Ipv4Address ("10.0.9.0"), Ipv4Mask ("255.255.255.0"));
-  Ipv4InterfaceContainer iic7 = ipv4.Assign (ndc10);
+  Ipv4InterfaceContainer iic11 = ipv4.Assign (ndc10);
 ipv4.SetBase (Ipv4Address ("10.0.11.0"), Ipv4Mask ("255.255.255.0"));
-  Ipv4InterfaceContainer iic7 = ipv4.Assign (ndc12);
+  Ipv4InterfaceContainer iic12 = ipv4.Assign (ndc12);
 ipv4.SetBase (Ipv4Address ("10.0.12.0"), Ipv4Mask ("255.255.255.0"));
-  Ipv4InterfaceContainer iic7 = ipv4.Assign (ndc13);
+  Ipv4InterfaceContainer iic13 = ipv4.Assign (ndc13);
 ipv4.SetBase (Ipv4Address ("10.0.13.0"), Ipv4Mask ("255.255.255.0"));
-  Ipv4InterfaceContainer iic7 = ipv4.Assign (ndc14);
+  Ipv4InterfaceContainer iic14 = ipv4.Assign (ndc14);
 ipv4.SetBase (Ipv4Address ("10.0.14.0"), Ipv4Mask ("255.255.255.0"));
-  Ipv4InterfaceContainer iic7 = ipv4.Assign (ndc15);
+  Ipv4InterfaceContainer iic15 = ipv4.Assign (ndc15);
 ipv4.SetBase (Ipv4Address ("10.0.15.0"), Ipv4Mask ("255.255.255.0"));
-  Ipv4InterfaceContainer iic7 = ipv4.Assign (ndc16);
+  Ipv4InterfaceContainer iic16 = ipv4.Assign (ndc16);
 ipv4.SetBase (Ipv4Address ("10.0.16.0"), Ipv4Mask ("255.255.255.0"));
-  Ipv4InterfaceContainer iic7 = ipv4.Assign (ndc17);
+  Ipv4InterfaceContainer iic17 = ipv4.Assign (ndc17);
 
   Ptr<Ipv4StaticRouting> staticRouting;
   
@@ -298,7 +301,7 @@ ipv4.SetBase (Ipv4Address ("10.0.16.0"), Ipv4Mask ("255.255.255.0"));
    staticRouting->SetDefaultRoute ("10.0.2.2", 1 );
   staticRouting = Ipv4RoutingHelper::GetRouting <Ipv4StaticRouting> (b->GetObject<Ipv4> ()->GetRoutingProtocol ());
    staticRouting->SetDefaultRoute ("10.0.1.2", 1 );
-   staticRouting = Ipv4RoutingHelper::GetRouting <Ipv4StaticRouting> (src->GetObject<Ipv4> ()->GetRoutingProtocol ());
+   staticRouting = Ipv4RoutingHelper::GetRouting <Ipv4StaticRouting> (a->GetObject<Ipv4> ()->GetRoutingProtocol ());
   staticRouting->SetDefaultRoute ("10.0.0.2", 1 );
    
 
